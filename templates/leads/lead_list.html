@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section>
+    {% for lead in leads %}
+        <p>{{ lead.first_name }} {{ lead.last_name }}</p>
+    {% endfor %}
+</section>
+
+{% endblock content %}
