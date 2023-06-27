@@ -1,3 +1,9 @@
-from django.shortcuts import render
+from django.views import generic
 
-# Create your views here.
+from .models import Lead
+
+
+class LeadListView(generic.ListView):
+    template_name = 'leads/lead_list.html'
+    queryset = Lead.objects.all()
+    context_object_name = 'leads'
