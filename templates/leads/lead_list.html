@@ -2,10 +2,45 @@
 
 {% block content %}
 
-<section>
-    {% for lead in leads %}
-        <p>{{ lead.first_name }} {{ lead.last_name }}</p>
-    {% endfor %}
-</section>
+<header class="bg-white shadow">
+    <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between">
+            <h1 class="text-3xl font-bold tracking-tight text-gray-900">Leads</h1>
+            <button type="button" class="block text-white bg-indigo-600 font-semibold text-sm text-center py-2 px-3 rounded-md shadow-none hover:bg-indigo-500">
+                Add Lead
+            </button>
+        </div>
+    </div>
+</header>
+<main class="lg:px-8 sm:px-6 py-12">
+    <div class="max-w-4xl mx-auto">
+        <ul role="list" class="bg-white divide-y divide-gray-100 overflow-hidden sm:rounded-xl ring-1 ring-gray-900/5 shadow-sm">
+        {% for lead in leads %}
+            <li class="flex relative justify-between gap-x-6 px-4 py-5 sm:px-6 hover:bg-gray-50">
+                <div class="flex gap-x-4">
+                    <div class="relative w-12 h-12 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600">
+                        <svg class="absolute w-14 h-14 text-gray-400 -left-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path></svg>
+                    </div>
+                    <div class="min-w-0 flex-auto">
+                        <p class="text-sm font-semibold leading-6 text-gray-900">
+                            <a href="#"><span class="absolute bottom-0 -top-px inset-x-0"></span>{{ lead.first_name }} {{ lead.last_name }}</a>
+                        </p>
+                        <p class="flex mt-1 text-xs leading-5 text-gray-500">email@example.com</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-x-4">
+                    <div class="hidden sm:flex sm:flex-col sm:items-end">
+                        <p class="text-sm leading-6 text-gray-900">Category</p>
+                        <p class="mt-1 text-xs leading-5 text-gray-500">Last seen <time datetime="2023-01-23T13:23Z">3h ago</time></p>
+                    </div>
+                    <svg class="flex-none w-5 h-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd"></path>
+                    </svg>
+                </div>
+            </li>
+        {% endfor %}
+        </ul>
+    </div>
+</main>
 
 {% endblock content %}
