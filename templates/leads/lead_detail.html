@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<header class="bg-white shadow">
+    <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between">
+            <h1 class="text-3xl font-bold tracking-tight text-gray-900">Lead Details</h1>
+            <button type="button" class="block text-white bg-indigo-600 font-semibold text-sm text-center py-2 px-3 rounded-md shadow-none hover:bg-indigo-500">
+                Update Lead
+            </button>
+        </div>
+    </div>
+</header>
+<main class="lg:px-8 sm:px-6 py-12">
+    <div class="max-w-4xl mx-auto">
+        <div class="bg-white overflow-hidden sm:rounded-lg shadow">
+            <dl class="divide-y divide-gray-100">
+                <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                    <dt class="text-sm font-medium text-gray-900">Full name</dt>
+                    <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{{ lead.first_name }} {{ lead.last_name }}</dd>
+                </div>
+                <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                    <dt class="text-sm font-medium text-gray-900">Email address</dt>
+                    <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">email@example.com</dd>
+                </div>
+                <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                    <dt class="text-sm font-medium text-gray-900">Age</dt>
+                    <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{{ lead.age }}</dd>
+                </div>
+                <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                    <dt class="text-sm font-medium text-gray-900">Category</dt>
+                    <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">Category example</dd>
+                </div>
+                <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                    <dt class="text-sm font-medium text-gray-900">About</dt>
+                    <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
+                        Fugiat ipsum ipsum deserunt
+                        culpa aute sint do nostrud anim incididunt cillum culpa consequat. Excepteur qui ipsum aliquip
+                        consequat sint. Sit id mollit nulla mollit nostrud in ea officia proident. Irure nostrud
+                        pariatur mollit ad adipisicing reprehenderit deserunt qui eu.
+                    </dd>
+                </div>
+            </dl>
+        </div>
+    </div>
+</main>
+
+{% endblock content %}
