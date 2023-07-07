@@ -22,7 +22,7 @@
                         <a href="{% url 'leads:lead-update' lead.pk  %}" class="block text-white bg-indigo-600 font-semibold text-sm text-center py-2 px-3 rounded-md shadow-none hover:bg-indigo-500">
                             <span>Update</span>
                         </a>
-                        <a href="#" class="block text-white bg-red-500 font-semibold text-sm text-center py-2 px-3 ml-3 rounded-md shadow-none hover:bg-red-400">
+                        <a href="{% url 'leads:lead-delete' lead.pk %}" class="block text-white bg-red-500 font-semibold text-sm text-center py-2 px-3 ml-3 rounded-md shadow-none hover:bg-red-400">
                             <span>Delete</span>
                         </a>
                     </div>

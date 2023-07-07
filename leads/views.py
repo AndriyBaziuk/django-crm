@@ -32,3 +32,11 @@ class LeadUpdateView(generic.UpdateView):
 
     def get_success_url(self):
         return reverse('leads:lead-list')
+
+
+class LeadDeleteView(generic.DeleteView):
+    template_name = 'leads/lead_delete.html'
+    queryset = Lead.objects.all()
+
+    def get_success_url(self):
+        return reverse('leads:lead-list')
